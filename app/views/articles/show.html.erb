@@ -1,20 +1,20 @@
-
-  <div>
-    <div>
-      <strong>Title:</strong>
+<div style="background-color: #fff">
+    <div class="title">
       <%= @article.title %>
     </div>
     <div>
-      <strong>Text:</strong>
       <%= @article.text %>
     </div>
-  </div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+</div>
+<div style="background-color: #fff">
+  <h2>Comments</h2>
+  <%= render 'comments/form' %>
+</div>
+<div>
+  <%= render @article.comments %>
+</div>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary'%> |
 <%= link_to 'Back', articles_path, class: 'btn btn-default'%>

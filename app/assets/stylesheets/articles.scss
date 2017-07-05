@@ -6,3 +6,44 @@ table {
 .back-btn {
   margin-top: 20px;
 }
+
+.abc {
+  margin-bottom: 50px;
+  display: block
+}
+
+
+.post {
+  display: block;
+  margin: 10px;
+  .link_post {
+    font-size: 25px;
+  }
+}
+
+.avatar_author{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 100%;
+  float: left;
+  margin-left: 20px;
+  margin-right:20px;
+}
+
+.link{
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+
+.title {
+  font-size: 50px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 40px;
+}

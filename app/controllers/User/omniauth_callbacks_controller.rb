@@ -6,6 +6,7 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def twitter
   # end
 
+
   # More info at:
   # https://github.com/plataformatec/devise#omniauth
 

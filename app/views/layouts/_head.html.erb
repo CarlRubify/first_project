@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">My website</a>
+    </div>
+    <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <% if !user_signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/users/sign_up">
+          <span class="fa fa-user"></span> Sign Up</a>
+        </li>
+        <li><a href="/users/sign_in">
+          <span class="fa fa-sign-in"></span> Sign In</a>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <%= link_to "Profile", edit_user_registration_path %></li>
+        <li><a href="#">Find</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Setting</a></li>
+          <li><a href="#">Page2</a></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </li>
+      </ul>
+    <% end %>
+</nav>
